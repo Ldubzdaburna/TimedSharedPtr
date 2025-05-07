@@ -28,20 +28,20 @@ Unit tests are written using the [Doctest](https://github.com/doctest/doctest) f
 - That it returns `nullptr` after the timer runs out
 - That the reference count behaves correctly
 
-Run tests with:
+### Run tests:
 ```sh
 g++ -std=c++17 TimeSharedPtr_test.cpp -o test && ./test
 ```
 
-##  Example
-```cpp
-TimedSharedPtr<Node> myNode(new Node(7), 100); // expires in 100 ms
-this_thread::sleep_for(chrono::milliseconds(50));
-cout << myNode.get(); // Still valid
+##  Example Program
+To try out how the smart pointer works, you can run `main.cpp`:
 
-this_thread::sleep_for(chrono::milliseconds(75));
-cout << myNode.get(); // Now expired – returns nullptr
+### Run main example:
+```sh
+g++ -std=c++17 main.cpp -o main && ./main
 ```
+
+This will show outputs like pointer address, reference counts, and when the pointer becomes expired.
 
 ##  AI Usage Disclosure
 A small part of the example in `main.cpp` was generated using ChatGPT to help format timing and output. All implementation logic was written and understood by the author.
