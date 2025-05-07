@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ldubzdaburna/Desktop/Final_Project_C++/output/TimeSharedPtr_test'
+relocations:     []
+...
